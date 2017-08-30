@@ -4,6 +4,7 @@
 # laravel-version-5.4-Basic-CRUD-
 <h3> Download or Clone Repository</h3>
 create db with the name of crud
+
 ```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -13,12 +14,12 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Run migrate artisan command
+# Run migrate artisan command
 ```
 php artisan migrate
 ```
 
-Run project
+# Run project
 ```
 php artisan serve
 ```
