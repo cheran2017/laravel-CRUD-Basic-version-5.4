@@ -3,7 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+//Models
 use App\Customer;
+
+//Form Requests
+use App\Http\Requests\CustomerRequest;
+
 
 class CustomerController extends Controller
 {
@@ -34,7 +39,7 @@ class CustomerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CustomerRequest $request)
     {
         $customer = new Customer;
 

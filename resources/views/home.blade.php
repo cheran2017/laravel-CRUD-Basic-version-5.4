@@ -12,6 +12,7 @@
 	}
 </style>
 <body>
+	
 	<div class="container">
 		<div class="flash-message" class="mydiv">
 		  @foreach (['danger', 'warning', 'success', 'info'] as $msg)
@@ -38,12 +39,18 @@
 							<div class="form-group">
 								<label>Name :</label>
 								<input type="text" name="name" placeholder="Enter name" class="form-control">
+								@if(count($errors))
+								<p style="color: red;">{{$errors->first('name')}}</p>
+								@endif
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<label>Email :</label>
 								<input type="email" name="email" placeholder="Enter name" class="form-control">
+								@if(count($errors))
+								<p style="color: red;">{{$errors->first('email')}}</p>
+								@endif
 							</div>
 						</div>
 					</div>
@@ -52,6 +59,9 @@
 							<div class="form-group">
 								<label>Phone number :</label>
 								<input type="text" name="phone_number" placeholder="Enter name" class="form-control">
+								@if(count($errors))
+								<p style="color: red;">{{$errors->first('phone_number')}}</p>
+								@endif
 							</div>
 						</div>
 					</div>
